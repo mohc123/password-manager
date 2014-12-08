@@ -118,6 +118,7 @@ class FrontendBuilder(object):
 				fileHandler = codecs.open(self.absolutePathForSourceFile(basePath, file), 'r', 'utf-8')
 			except:
 				print "FILE: " + file
+				raise
 
 			result[file] = fileHandler.read()
 			fileHandler.close()
